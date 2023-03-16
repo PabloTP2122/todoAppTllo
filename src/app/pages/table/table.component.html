@@ -19,7 +19,7 @@
       <!-- Row -->
       <tr
         cdk-row
-        class="bg-white border-b"
+        class="border-b"
         [ngClass]="{'bg-red-100': row.price < 100}"
         *cdkRowDef="let row; columns: columns"
       ></tr>
@@ -50,12 +50,7 @@
 
       <ng-container cdkColumnDef="Precio">
         <th cdk-header-cell *cdkHeaderCellDef class="px-6 py-3">Precio</th>
-        <td
-          cdk-cell
-          [ngClass]="{'bg-red-100': row.price < 100}"
-          *cdkCellDef="let row"
-          class="px-6 py-4"
-        >
+        <td cdk-cell *cdkCellDef="let row" class="px-6 py-4">
           {{ row.price | currency }}
         </td>
         <th cdk-footer-cell *cdkFooterCellDef class="px-6 py-3">

@@ -9,11 +9,7 @@
             class="flex items-center space-x-4 p-2"
             *ngFor="let product of products"
           >
-            <img
-              class="w-10 h-10 rounded-full"
-              [src]="product.category.image"
-              alt=""
-            />
+            <img class="w-10 h-10 rounded-full" [src]="product.images" alt="" />
             <div class="space-y-1 font-medium dark:text-white">
               <div class="text-gray-700">{{ product.title }}</div>
               <div class="text-sm text-gray-500 dark:text-gray-400">
@@ -47,11 +43,7 @@
             class="flex items-center space-x-4 p-2"
             *cdkVirtualFor="let product of products"
           >
-            <img
-              class="w-10 h-10 rounded-full"
-              [src]="product.category.image"
-              alt=""
-            />
+            <img class="w-10 h-10 rounded-full" [src]="product.images" alt="" />
             <div class="space-y-1 font-medium dark:text-white">
               <div class="text-gray-700">{{ product.title }}</div>
               <div class="text-sm text-gray-500 dark:text-gray-400">
