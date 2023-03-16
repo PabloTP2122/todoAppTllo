@@ -18,10 +18,12 @@ export class ScrollComponent {
   limit = 10;
 
   ngOnInit(): void {
-    this.productsService.getAllProducts(0, 10).subscribe(data => {
-      this.products = data;
-      this.offset += this.limit;
-    });
+    this.productsService.getAllProducts(this.offset, this.limit)
+      .subscribe(data => {
+        this.products = data;
+        this.offset += this.limit;
+        console.log(data);
+      });
 
   }
 
