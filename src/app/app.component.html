@@ -1,1 +1,29 @@
-<router-outlet></router-outlet> <app-board></app-board>
+<router-outlet></router-outlet>
+<div
+  class="flex flex-grow flex-col gap-4 w-full h-screen self-center items-center content-center bg-gradient-to-r from-cyan-500 to-blue-500"
+>
+  <h1
+    class="text-center text-white p-4 mt-4 font-semibold bg-slate-500 rounded-md"
+  >
+    Navega con los botones para visitar las diferentes partes del proyecto
+  </h1>
+  <app-btn
+    class="w-96"
+    [typeBtn]="'button'"
+    routerLink="/board"
+    [color]="'light'"
+    >Board</app-btn
+  >
+  <app-btn class="w-96" [typeBtn]="'button'" [color]="'light'"
+    ><a routerLink="/boards">Boards</a>
+  </app-btn>
+  <app-btn class="w-96" [typeBtn]="'button'" [color]="'light'"
+    ><a routerLink="/table">Table</a>
+  </app-btn>
+  <app-btn class="w-96" [typeBtn]="'button'" [color]="'light'"
+    ><a routerLink="/scroll">Scroll</a>
+  </app-btn>
+  <app-btn class="w-96" [typeBtn]="'button'" [color]="'light'"
+    ><a routerLink="/login">Log in</a>
+  </app-btn>
+</div>
